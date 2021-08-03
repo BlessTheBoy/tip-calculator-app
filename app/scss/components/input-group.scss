@@ -1,0 +1,11 @@
+@use '../util' as *;
+
+.input {
+  padding: rem(5);
+  &__icon {
+    width: rem(20);
+  }
+  &__input {
+    background-color: $strong-cyan;
+  }
+}
