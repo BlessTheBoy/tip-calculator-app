@@ -1,0 +1,7 @@
+@use '../globals' as *;
+@use '../util' as *;
+
+.calc {
+  background-color: $white;
+  padding: 1rem;
+}
