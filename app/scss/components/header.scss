@@ -2,8 +2,12 @@
 
 .header {
   text-align: center;
-  margin: 4rem auto 3rem;
+  margin: 4rem auto 2rem;
   &__logo {
     object-fit: contain;
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: 3rem;
   }
 }

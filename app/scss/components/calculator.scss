@@ -2,12 +2,9 @@
 @use '../util' as *;
 
 .calc {
-  @include breakpoint(medium) {
-    // padding: 0 1rem;
-  }
-
   &__container {
     background-color: $white;
-    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
   }
 }

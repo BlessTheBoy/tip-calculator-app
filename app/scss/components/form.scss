@@ -1,0 +1,18 @@
+@use '../globals' as *;
+@use '../util' as *;
+
+.form {
+  .form-control {
+    span {
+      display: block;
+      position: relative;
+    }
+    input {
+      text-align: right;
+      width: 100%;
+    }
+    img {
+      position: absolute;
+    }
+  }
+}
