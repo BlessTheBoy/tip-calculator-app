@@ -46,14 +46,14 @@
     <main class="container calc">
       <form class="calc__container" action="">
         <div class="calc__form form">
-          <p class="form-control">
+          <p class="input-group">
             <label for="bill">Bill</label>
             <span>
               <img src="images/icon-dollar.svg" alt="" />
               <input type="text" id="bill" name="bill" placeholder="0" />
             </span>
           </p>
-          <fieldset>
+          <fieldset class="tip-percent">
             <legend>Select Tip %</legend>
             <ul>
               <li>
@@ -83,10 +83,12 @@
               </li>
             </ul>
           </fieldset>
-          <p class="form-control">
+          <p class="input-group">
             <label for="People">Number of People</label>
-            <img src="images/icon-person.svg" alt="" />
-            <input type="text" id="people" name="people" placeholder="0" />
+            <span>
+              <img src="images/icon-person.svg" alt="" />
+              <input type="text" id="people" name="people" placeholder="0" />
+            </span>
           </p>
         </div>
 

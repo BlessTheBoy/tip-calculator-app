@@ -2,17 +2,29 @@
 @use '../util' as *;
 
 .form {
-  .form-control {
-    span {
-      display: block;
-      position: relative;
-    }
-    input {
-      text-align: right;
-      width: 100%;
-    }
-    img {
-      position: absolute;
-    }
+  label,
+  legend {
+    display: inline-block;
+    color: $dark-grayish-cyan;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    font-size: rem(18);
+  }
+
+  // Remove autocomplete styling
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: none;
+    background-color: $light-grayish-cyan-2;
+    -webkit-text-fill-color: $very-dark-cyan !important;
+    transition: background-color 5000s ease-in-out 0s;
   }
 }

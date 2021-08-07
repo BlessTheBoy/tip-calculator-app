@@ -1,12 +1,28 @@
 @use '../util' as *;
 @use '../globals' as *;
 
-.input {
-  padding: rem(5);
-  &__icon {
-    width: rem(20);
+.input-group {
+  margin: 0;
+  span {
+    display: block;
+    position: relative;
   }
-  &__input {
-    background-color: $strong-cyan;
+  input {
+    text-align: right;
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    color: $very-dark-cyan;
+    font-size: rem(18);
+    font-weight: 700;
+    background-color: $light-grayish-cyan-2;
+    border: none;
+    outline: none;
   }
+  img {
+    position: absolute;
+    top: 50%;
+    padding: 0rem 0.8rem;
+    transform: translateY(-50%);
+  }
+  
 }
