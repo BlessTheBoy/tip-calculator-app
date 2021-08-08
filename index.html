@@ -47,8 +47,11 @@
       <form class="calc__container" action="">
         <div class="calc__form form">
           <p class="input-group">
-            <label for="bill">Bill</label>
-            <span>
+            <span class="label-wrap">
+              <label for="bill">Bill</label>
+              <span class="error-message">error message</span>
+            </span>
+            <span class="input-wrap">
               <img src="images/icon-dollar.svg" alt="" />
               <input type="text" id="bill" name="bill" placeholder="0" />
             </span>
@@ -84,8 +87,11 @@
             </ul>
           </fieldset>
           <p class="input-group">
-            <label for="People">Number of People</label>
-            <span>
+            <span class="label-wrap">
+              <label for="People">Number of People</label>
+              <span class="error-message">error message</span>
+            </span>
+            <span class="input-wrap">
               <img src="images/icon-person.svg" alt="" />
               <input type="text" id="people" name="people" placeholder="0" />
             </span>
@@ -109,7 +115,7 @@
               <p class="result__value">$0.00</p>
             </div>
           </div>
-          <input class="result__reset" type="reset" value="Reset" />
+          <input class="result__reset" type="reset" value="Reset" disabled />
         </div>
       </form>
     </main>

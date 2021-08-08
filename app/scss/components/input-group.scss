@@ -3,11 +3,34 @@
 
 .input-group {
   margin: 0;
-  span {
+
+  .label-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .error-message {
+    display: none;
+    color: $red;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: rem(3);
+  }
+  .input-wrap {
     display: block;
     position: relative;
   }
-  
+
+  &.error {
+    .error-message {
+      display: inline-block;
+    }
+
+    input[type="text"] {
+      border: 2px solid $red;
+    }
+  }
+
   img {
     position: absolute;
     top: 50%;

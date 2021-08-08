@@ -1,5 +1,6 @@
 @use 'fonts' as *;
 @use 'colors' as *;
+@use '../util' as *;
 
 html {
   font-size: 100%;
@@ -18,4 +19,11 @@ body {
   font-family: $font-mono;
   min-height: 100vh;
   background-color: $light-grayish-cyan;
+
+  @include breakpoint(large) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
