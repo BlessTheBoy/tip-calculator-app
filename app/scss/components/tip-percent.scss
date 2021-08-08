@@ -23,12 +23,13 @@
         cursor: pointer;
         width: 100%;
         margin: 0;
+        height: $input-height;
         padding: rem(3.4) 0;
         text-align: center;
         font-size: rem(24);
         background-color: $very-dark-cyan;
         color: $white;
-        border-radius: rem(6);
+        border-radius: $input-radius;
         transform: all ease-our 0.3s;
 
         &:hover {

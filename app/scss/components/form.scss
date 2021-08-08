@@ -2,6 +2,8 @@
 @use '../util' as *;
 
 .form {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
   label,
   legend {
     display: inline-block;
@@ -20,13 +22,13 @@
     font-size: rem(24);
     font-weight: 700;
     background-color: $light-grayish-cyan-2;
-    border: 1px solid $light-grayish-cyan-2;
-    border-radius: rem(6);
+    border: 2px solid $light-grayish-cyan-2;
+    border-radius: $input-radius;
     outline: none;
 
     &:focus,
     &:hover {
-      border: 1px solid $strong-cyan;
+      border: 2px solid $strong-cyan;
     }
   }
 
@@ -40,7 +42,7 @@
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    border: none;
+    border: 2px solid $strong-cyan;
     -webkit-text-fill-color: none;
     background-color: $light-grayish-cyan-2;
     -webkit-text-fill-color: $very-dark-cyan !important;

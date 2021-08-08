@@ -1,0 +1,57 @@
+@use '../globals' as *;
+@use '../util' as *;
+
+.result {
+  padding: 1rem 1.5rem;
+  background-color: $very-dark-cyan;
+  border-radius: rem(8);
+
+  &__values {
+    padding: 0.3rem 0;
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+    span {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: $dark-grayish-cyan;
+    }
+  }
+
+  &__value {
+    margin: 0;
+    font-size: rem(32);
+    font-weight: 700;
+    color: $strong-cyan;
+  }
+
+  &__reset {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.4rem 0.8rem;
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    border-radius: $input-radius;
+    line-height: 1;
+
+    &:hover {
+      background-color: $light-grayish-cyan;
+    }
+  }
+}
