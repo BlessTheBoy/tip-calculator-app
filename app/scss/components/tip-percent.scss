@@ -4,5 +4,61 @@
 .tip-percent {
   border: none;
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 1.8rem 0 1.5rem;
+
+  &__list {
+    list-style: none;
+    padding: 0.3rem 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      label {
+        cursor: pointer;
+        width: 100%;
+        margin: 0;
+        padding: rem(3.4) 0;
+        text-align: center;
+        font-size: rem(24);
+        background-color: $very-dark-cyan;
+        color: $white;
+        border-radius: rem(6);
+        transform: all ease-our 0.3s;
+
+        &:hover {
+          background-color: $strong-cyan;
+          color: $very-dark-cyan;
+        }
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      input[type="radio"]:checked + label {
+        background-color: $strong-cyan;
+        color: $very-dark-cyan;
+      }
+
+      input#custom:checked + label {
+        display: none;
+      }
+      // input#custom:checked ~ input {
+      //   display: inline-block;
+      // }
+
+      input#custom:not(:checked) ~ input[type="text"] {
+        display: none;
+      }
+      input#custom:checked ~ input[type="text"] {
+        display: inline-block;
+      }
+    }
+  }
 }

@@ -8,7 +8,26 @@
     color: $dark-grayish-cyan;
     font-weight: 700;
     margin: 0 0 0.4rem;
-    font-size: rem(18);
+    font-size: rem(15);
+  }
+
+  input[type="text"] {
+    box-sizing: border-box !important;
+    text-align: right;
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    color: $very-dark-cyan;
+    font-size: rem(24);
+    font-weight: 700;
+    background-color: $light-grayish-cyan-2;
+    border: 1px solid $light-grayish-cyan-2;
+    border-radius: rem(6);
+    outline: none;
+
+    &:focus,
+    &:hover {
+      border: 1px solid $strong-cyan;
+    }
   }
 
   // Remove autocomplete styling
