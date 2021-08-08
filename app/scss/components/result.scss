@@ -5,9 +5,12 @@
   padding: 1rem 1.5rem;
   background-color: $very-dark-cyan;
   border-radius: rem(8);
+  display: flex;
+  flex-direction: column;
 
   &__values {
     padding: 0.3rem 0;
+    flex-grow: 1;
     div {
       display: flex;
       justify-content: space-between;
@@ -31,9 +34,13 @@
 
   &__value {
     margin: 0;
-    font-size: rem(32);
+    font-size: rem(30);
     font-weight: 700;
     color: $strong-cyan;
+
+    @include breakpoint(large) {
+      font-size: rem(38);
+    }
   }
 
   &__reset {
