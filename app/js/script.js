@@ -11,6 +11,9 @@ const customInput = document.querySelector("#customValue");
 const tipDisplay = document.querySelector("#tip");
 const totalDisplay = document.querySelector("#total");
 
+const reset = document.querySelector("#reset");
+reset.onclick = resetView;
+
 // Get all input and add event listener
 const inputs = document.querySelectorAll("input");
 
@@ -66,9 +69,31 @@ function checkAndConvert(value, inputWrapper) {
   return null;
 }
 
+function resetView(e) {
+  e.preventDefault();
+
+  // Clearing inputs
+  bill.value = "";
+  for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].checked = false;
+  }
+  people.value = "";
+
+  // Removing errors
+  removeError(billWrapper, percentWrapper, peopleWrapper);
+
+  // clearing outputs
+  tipDisplay.innerHTML = "$0.00";
+  totalDisplay.innerHTML = "$0.00";
+
+  // disabling reset
+  reset.disabled = true;
+}
+
 // Calculate tip
 function calculateTip() {
-  console.log("calculate tip started");
+  // Enable reset button
+  reset.disabled = false;
 
   // Get bill, percentage to tip and number of people splitting the bill
   let billValue = getBillValue();
