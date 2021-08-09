@@ -118,7 +118,7 @@ function calculateTip() {
 
   // Error check for tip percentage
   if (tipPercentage == null) {
-    showError(percentWrapper, "pick tip percentage");
+    showError(percentWrapper, "select tip percentage");
     return;
   } else if (tipPercentage == "custom") {
     tipPercentage = checkAndConvert(customInput.value, percentWrapper);
