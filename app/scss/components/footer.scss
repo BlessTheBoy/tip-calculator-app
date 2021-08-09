@@ -1,0 +1,18 @@
+@use '../globals' as *;
+@use '../util' as *;
+
+.attribution {
+  font-size: rem(10);
+  text-align: center;
+  background-color: $white;
+  padding: 1rem 0.4rem;
+
+  @include breakpoint(large) {
+    font-size: rem(11);
+    background-color: transparent;
+  }
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
