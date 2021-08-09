@@ -33,8 +33,8 @@
       <img src="images/logo.svg" alt="splitter logo" class="header__logo" />
     </header>
     <main class="container calc">
-      <form class="calc__container" action="">
-        <div class="calc__form form">
+      <div class="calc__container" action="">
+        <form class="calc__form form">
           <p class="input-group" id="bill-wrapper">
             <span class="label-wrap">
               <label for="bill">Bill</label>
@@ -98,7 +98,7 @@
               <input type="text" id="people" name="people" placeholder="0" />
             </span>
           </p>
-        </div>
+        </form>
 
         <div class="calc__result result">
           <div class="result__values">
@@ -117,15 +117,17 @@
               <p class="result__value" id="total">$0.00</p>
             </div>
           </div>
-          <input
+          <button
             class="result__reset"
             type="reset"
             value="Reset"
             id="reset"
             disabled
-          />
+          >
+            Reset
+          </button>
         </div>
-      </form>
+      </div>
     </main>
 
     <footer class="container">
