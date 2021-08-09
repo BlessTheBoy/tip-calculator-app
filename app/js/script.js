@@ -8,6 +8,9 @@ const percentWrapper = document.querySelector("#percent-wrapper");
 const radioButtons = document.getElementsByName("percentage");
 const customInput = document.querySelector("#customValue");
 
+const tipDisplay = document.querySelector("#tip");
+const totalDisplay = document.querySelector("#total");
+
 // Get all input and add event listener
 const inputs = document.querySelectorAll("input");
 
@@ -83,6 +86,10 @@ function calculateTip() {
   if (tipPercentage == null) {
     showError(percentWrapper, "pick or enter percentage");
     return;
+  } else if (tipPercentage == "custom") {
+    tipPercentage = checkAndConvert(customInput.value, percentWrapper);
+    console.log(`tipPercentage`, tipPercentage);
+    if (!tipPercentage) return;
   } else {
     tipPercentage = Number(tipPercentage);
   }
@@ -103,5 +110,6 @@ function calculateTip() {
   tipPerPerson = Math.round((tipPerPerson + Number.EPSILON) * 100) / 100;
 
   // Displaying results
-  
+  tipDisplay.innerHTML = "$" + tipPerPerson;
+  totalDisplay.innerHTML = "$" + totalPerPerson;
 }
