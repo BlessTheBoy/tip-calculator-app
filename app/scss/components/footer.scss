@@ -13,6 +13,21 @@
   }
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: $blue;
+    display: inline-block;
+    &:hover{
+      color: $very-dark-cyan;
+    }
+    svg {
+      fill: $blue;
+      object-fit: contain;
+      height: rem(18);
+      text-align: center;
+      margin-bottom: rem(-5);
+
+      &:hover {
+        fill: $very-dark-cyan;
+      }
+    }
   }
 }
