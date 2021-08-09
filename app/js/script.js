@@ -6,6 +6,8 @@ const people = document.querySelector("#people");
 
 const percentWrapper = document.querySelector("#percent-wrapper");
 const radioButtons = document.getElementsByName("percentage");
+
+const customRadio = document.querySelector("#custom");
 const customInput = document.querySelector("#customValue");
 
 const tipDisplay = document.querySelector("#tip");
@@ -20,6 +22,13 @@ const inputs = document.querySelectorAll("input");
 for (let index = 0; index < inputs.length; index++) {
   inputs[index].onchange = calculateTip;
 }
+
+// Auto focus for custom input
+customRadio.addEventListener("change", function () {
+  if (this.checked) {
+    customInput.focus();
+  }
+});
 
 // Get bill value
 function getBillValue() {
