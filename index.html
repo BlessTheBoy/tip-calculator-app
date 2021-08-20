@@ -30,7 +30,9 @@
   </head>
   <body>
     <header class="container header">
-      <h1><img src="images/logo.svg" alt="splitter logo" class="header__logo" /></h1>
+      <h1>
+        <img src="images/logo.svg" alt="splitter logo" class="header__logo" />
+      </h1>
     </header>
     <main class="container calc">
       <div class="calc__container">
@@ -45,11 +47,13 @@
               <input type="text" id="bill" name="bill" placeholder="0" />
             </span>
           </p>
+
+          <!-- Tip percentage options -->
           <fieldset class="tip-percent input-group" id="percent-wrapper">
-            <span class="label-wrap">
-              <legend>Select Tip %</legend>
-              <span class="error-message">error message</span>
-            </span>
+            <!-- <span class="label-wrap"> -->
+            <span class="tip-percent__error error-message">error message</span>
+            <legend class="tip-percent__legend">Select Tip %</legend>
+            <!-- </span> -->
             <ul class="tip-percent__list">
               <li class="tip-percent__list-item">
                 <input type="radio" name="percentage" id="5%" value="5" />
@@ -88,6 +92,8 @@
               </li>
             </ul>
           </fieldset>
+
+          <!-- Number of people input -->
           <p class="input-group" id="people-wrapper">
             <span class="label-wrap">
               <label for="people">Number of People</label>

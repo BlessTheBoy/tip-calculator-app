@@ -5,6 +5,19 @@
   border: none;
   padding: 0;
   margin: 1.8rem 0 1.5rem;
+  position: relative;
+
+  &__legend {
+    padding: 0;
+  }
+
+  &__error {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: -18px;
+    text-align: right;
+  }
 
   &__list {
     list-style: none;
