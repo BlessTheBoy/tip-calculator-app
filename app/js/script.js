@@ -72,6 +72,8 @@ function checkAndConvert(value, inputWrapper) {
     showError(inputWrapper, "enter valid number");
   } else if (Number(value) == 0) {
     showError(inputWrapper, "Can't be zero");
+  } else if (Number(value) < 0) {
+    showError(inputWrapper, "Can't be negative");
   } else {
     return Number(value);
   }

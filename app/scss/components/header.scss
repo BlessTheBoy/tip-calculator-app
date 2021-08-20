@@ -3,6 +3,11 @@
 .header {
   text-align: center;
   margin: 2.5rem auto 2rem;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
   &__logo {
     object-fit: contain;
   }
